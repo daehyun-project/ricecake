@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="../rice/index.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -19,7 +19,10 @@
                     <p>🏏</p>
                     <p>🏏</p>
                 </div>
-
+                <div style="color: white;">
+                    26일 12시부터 3시간 코딩해서 만든거라 토끼만 있어요
+                </div>
+                
                 <div class="scorebar">
                     <div>❄️</div>
                     <div class="score">0</div>
@@ -113,7 +116,7 @@ var pinkbtn = document.getElementById('pinkbtn');
 bluebtn.addEventListener('click', function(){
     if (list[cnt] == "blue"){
         var ball = document.querySelectorAll('.ball');
-        ball[cnt].style.backgroundImage = "url('/images/icon/blue_gray.png')";
+        ball[cnt].style.backgroundImage = "url('../rice/images/icon/blue_gray.png')";
         cnt++;
         console.log("성공");
     } else {
@@ -129,7 +132,7 @@ bluebtn.addEventListener('click', function(){
 greenbtn.addEventListener('click', function(){
     if (list[cnt] == "green"){
         var ball = document.querySelectorAll('.ball');
-        ball[cnt].style.backgroundImage = "url('/images/icon/green_gray.png')";
+        ball[cnt].style.backgroundImage = "url('../rice/images/icon/green_gray.png')";
 
         cnt++;
         console.log("성공");
@@ -146,7 +149,7 @@ greenbtn.addEventListener('click', function(){
 tealbtn.addEventListener('click', function(){
     if (list[cnt] == "teal"){
         var ball = document.querySelectorAll('.ball');
-        ball[cnt].style.backgroundImage = "url('/images/icon/teal_gray.png')";
+        ball[cnt].style.backgroundImage = "url('../rice/images/icon/teal_gray.png')";
         cnt++;
         console.log("성공");
     } else {
@@ -162,7 +165,7 @@ tealbtn.addEventListener('click', function(){
 pinkbtn.addEventListener('click', function(){
     if (list[cnt] == "pink"){
         var ball = document.querySelectorAll('.ball');
-        ball[cnt].style.backgroundImage = "url('/images/icon/pink_gray.png')";
+        ball[cnt].style.backgroundImage = "url('../rice/images/icon/pink_gray.png')";
 
         // list.shift();
         cnt++;
