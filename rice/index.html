@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../rice/index.css">
+    <link rel="stylesheet" href="/rice/index.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -34,172 +34,23 @@
                 <div class="time"></div>
                 
             </div>
-
-            <div class="dot">
-                <div id="top" class="top">
-
-                </div>
-                <div id="bottom" class="bottom">
-                    
-                </div>
+            <h3 style="color:white;">[플레이할 모드를 선택해주세요]</h3>
+            <div class="main">
+                <img width="220px" height="400px" src="images/pig.png" alt="rice">
+                <img width="220px" height="400px" src="images/rabbit.png" alt="rice">
             </div>
+            
 
 
         </div>
         
-        <div class="control">
-            <div class="blankbutton">
-
-            </div>
-
-            <div class="topbutton">
-                <div class="left">
-
-                </div>
-                <div class="right">
-                    <div id="greenbtn" class="greenbtn"></div>
-                    <div id="bluebtn" class="bluebtn"></div>
-                </div>
-            </div>
-
-            <div class="bottombutoom">
-                <div class="left">
-                    <div id="tealbtn" class="tealbtn"></div>
-                </div>
-                <div class="right">
-                    <div id="pinkbtn" class="pinkbtn"></div>
-                </div>
-            </div>
+        <div class="control" style="color: white;">
+            <h1>🐷 연습할 모드를 선택해 주세요 🐰</h1>
+            <h2>🐷 돼지인간 왼손잡이 모드 🐷</h2>
+            <h2>🐰 토끼인간 오른손잡이 모드 🐰</h2>
         </div>
 
     </div>
-
-    <script>
-        var topdiv = document.getElementById('top');
-        var bottomdiv = document.getElementById('bottom');
-
-        var ball_list = ["blue", "green","teal","pink"];
-
-        var list = []
-        var cnt = 0;
-        
-        function start(){
-            list = [];
-            topdiv.innerHTML = "";
-            bottomdiv.innerHTML = "";
-            cnt = 0;
-
-            for (let i = 0; i < 12; i++){
-            let random = Math.floor(Math.random() * ball_list.length);
-            list.push(ball_list[random]);
-            }
-
-            console.log(list);
-
-            for (let i = 0; i < 6; i++){
-                topdiv.innerHTML += `<div class="ball ${list[i]}"></div>`;
-                bottomdiv.innerHTML += `<div class="ball ${list[i+6]}"></div>`;
-            }
-
-            
-        }
-
-
-
-var bluebtn = document.getElementById('bluebtn');
-var greenbtn = document.getElementById('greenbtn');
-var tealbtn = document.getElementById('tealbtn');
-var pinkbtn = document.getElementById('pinkbtn');
-
-
-
-bluebtn.addEventListener('click', function(){
-    if (list[cnt] == "blue"){
-        var ball = document.querySelectorAll('.ball');
-        ball[cnt].style.backgroundImage = "url('../rice/images/icon/blue_gray.png')";
-        cnt++;
-        console.log("성공");
-    } else {
-        alert("실패");
-        start();
-    }
-    if (cnt == 12){
-        alert("성공");
-        start();
-    }
-});
-
-greenbtn.addEventListener('click', function(){
-    if (list[cnt] == "green"){
-        var ball = document.querySelectorAll('.ball');
-        ball[cnt].style.backgroundImage = "url('../rice/images/icon/green_gray.png')";
-
-        cnt++;
-        console.log("성공");
-    } else {
-        alert("실패");
-        start();
-    }
-    if (cnt == 12){
-        alert("성공");
-        start();
-    }
-});
-
-tealbtn.addEventListener('click', function(){
-    if (list[cnt] == "teal"){
-        var ball = document.querySelectorAll('.ball');
-        ball[cnt].style.backgroundImage = "url('../rice/images/icon/teal_gray.png')";
-        cnt++;
-        console.log("성공");
-    } else {
-        alert("실패");
-        start();
-    }
-    if (cnt == 12){
-        alert("성공");
-        start();
-    }
-});
-
-pinkbtn.addEventListener('click', function(){
-    if (list[cnt] == "pink"){
-        var ball = document.querySelectorAll('.ball');
-        ball[cnt].style.backgroundImage = "url('../rice/images/icon/pink_gray.png')";
-
-        // list.shift();
-        cnt++;
-        console.log("성공");
-    } else {
-        alert("실패");
-        start();
-    }
-
-    if (cnt == 12){
-        alert("성공");
-        start();
-    }
-
-});
-
-// 시간을 세는 함수
-
-var time = document.querySelector('.time');
-var alerticon = document.querySelector('.alerticon');
-
-var timer = setInterval(function(){
-    time.innerHTML = parseInt(time.innerHTML) - 1;
-    if (parseInt(time.innerHTML) == 0){
-        clearInterval(timer);
-        alerticon.innerHTML = "시간초과";
-    }
-}, 1000);
-
-  
-start();
-
-
-</script>
 
 </body>
 </html>
